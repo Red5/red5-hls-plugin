@@ -1,0 +1,11 @@
+*.class
+
+# Package Files #
+*.ts
+*.m3u8
+*.jar
+*.war
+*.ear
+/target
+/.settings
+/log
