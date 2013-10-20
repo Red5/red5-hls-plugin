@@ -14,14 +14,18 @@ https://code.google.com/p/red5/
 
 The Red5 users list may be found here: https://groups.google.com/forum/#!forum/red5interest
 
-== Eclipse ==
+Eclipse
+----------
 
 To create the eclipse project files, execute this within the plugin and / or example directories:
+```
 mvn eclipse:eclipse
+```
 
 Then you will be able to import the projects into Eclipse.
 
-== Deployment ==
+Deployment
+------------
 
 1. Build both the hls-plugin and the example application (or use your own app). 
 2. Place the war in the red5/webapps directory
