@@ -14,3 +14,5 @@
 /plugin/*.log
 /plugin/.settings
 /plugin/target
+/example/.settings
+/example/target
