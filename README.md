@@ -14,4 +14,11 @@ https://code.google.com/p/red5/
 
 The Red5 users list may be found here: https://groups.google.com/forum/#!forum/red5interest
 
+== Eclipse ==
+
+To create the eclipse project files, execute this within the plugin and / or example directories:
+mvn eclipse:eclipse
+
+Then you will be able to import the projects into Eclipse.
+
 

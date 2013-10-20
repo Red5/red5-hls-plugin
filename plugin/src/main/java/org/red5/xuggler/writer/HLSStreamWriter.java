@@ -1,3 +1,21 @@
+/*
+ * RED5 HLS plugin - https://github.com/mondain/red5-hls-plugin
+ * 
+ * Copyright 2006-2013 by respective authors (see below). All rights reserved.
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package org.red5.xuggler.writer;
 
 import static java.util.concurrent.TimeUnit.MICROSECONDS;
@@ -39,11 +57,11 @@ import com.xuggle.xuggler.IVideoPicture;
  * <tr><td>AAC-LC</td><td>"mp4a.40.2"</td></tr>
  * <tr><td>HE-AAC</td><td>"mp4a.40.5"</td></tr>
  * <tr><td>MP3</td><td>"mp4a.40.34"</td></tr>
- * <tr><td>H.264 Baseline Profile level 3.0</td><td>"avc1.42001e" or “avc1.66.30”<br />
- * Note: Use “avc1.66.30” for compatibility with iOS versions 3.0 to 3.12.</td></tr>
+ * <tr><td>H.264 Baseline Profile level 3.0</td><td>"avc1.42001e" or avc1.66.30<br />
+ * Note: Use avc1.66.30 for compatibility with iOS versions 3.0 to 3.12.</td></tr>
  * <tr><td>H.264 Baseline Profile level 3.1</td><td>"avc1.42001f"</td></tr>
- * <tr><td>H.264 Main Profile level 3.0</td><td>"avc1.4d001e" or “avc1.77.30”<br />
- * Note: Use “avc1.77.30” for compatibility with iOS versions 3.0 to 3.12.</td></tr>
+ * <tr><td>H.264 Main Profile level 3.0</td><td>"avc1.4d001e" or avc1.77.30<br />
+ * Note: Use avc1.77.30 for compatibility with iOS versions 3.0 to 3.12.</td></tr>
  * <tr><td>H.264 Main Profile level 3.1</td><td>"avc1.4d001f"</td></tr>
  * </table>
  * 
@@ -54,6 +72,10 @@ import com.xuggle.xuggler.IVideoPicture;
  * Segment handling
  * http://www.ffmpeg.org/ffmpeg-formats.html#toc-mpegts
  * http://www.ffmpeg.org/ffmpeg-formats.html#toc-segment_002c-stream_005fsegment_002c-ssegment
+ * 
+ * @author Paul Gregoire (mondain@gmail.com)
+ * @author Gavriloaie Eugen-Andrei(crtmpserver@gmail.com)
+ * @author Andy Shaules (bowljoman@gmail.com)
  */
 public class HLSStreamWriter implements IStreamWriter {
 

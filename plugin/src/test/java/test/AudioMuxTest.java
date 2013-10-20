@@ -1,18 +1,25 @@
 package test;
 
-import static org.junit.Assert.assertTrue;
+import java.io.*;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
-import org.red5.util.AudioMux;
+import org.red5.stream.util.AudioMux;
 
 public class AudioMuxTest {
 
 	@Test
-	public void test() {
-		DataInputStream d1 = new DataInputStream(new FileInputStream("1.pcm"));
-		DataInputStream d2 = new DataInputStream(new FileInputStream("2.pcm"));
+	public void test() throws IOException {
+	
+		File file1 = new File("1.pcm");
+		File file2 = new File("2.pcm");
+		
+		if (!file1.exists() || !file2.exists()) {
+			System.err.println("This test will not run without the two PCM files (1.pcm and 2.pcm)");
+			return;
+		}
+	
+		DataInputStream d1 = new DataInputStream(new FileInputStream(file1));
+		DataInputStream d2 = new DataInputStream(new FileInputStream(file2));
 
 		DataOutputStream ds = new DataOutputStream(new FileOutputStream("test.pcm"));
 
@@ -41,7 +48,7 @@ public class AudioMuxTest {
 			}
 			ds.flush();
 			if (s % 100 == 0) {
-				log.info("Sample: {}", s);
+				System.out.println("Sample: " + s);
 			}
 		}
 		ds.close();
