@@ -1,4 +1,6 @@
 *.class
+.project
+.classpath
 
 # Package Files #
 *.ts
