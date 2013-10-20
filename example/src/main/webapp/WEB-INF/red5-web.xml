@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:lang="http://www.springframework.org/schema/lang"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd                            
+    http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-3.0.xsd">
+
+	<bean id="placeholderConfig" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	    <property name="location" value="/WEB-INF/red5-web.properties" />
+	</bean>
+
+	<bean id="web.context" class="org.red5.server.Context" autowire="byType" />
+
+	<bean id="web.scope" class="org.red5.server.scope.WebScope" init-method="register">
+		<property name="server" ref="red5.server" />
+		<property name="parent" ref="global.scope" />
+		<property name="context" ref="web.context" />
+		<property name="handler" ref="web.handler" />
+		<property name="contextPath" value="${webapp.contextPath}" />
+		<property name="virtualHosts" value="${webapp.virtualHosts}" />
+	</bean>
+
+    <bean id="schedulingService" class="org.red5.server.scheduling.ApplicationSchedulingService" />
+
+	<bean id="web.handler" class="com.red5.hlsapp.Application" />
+	  
+    <bean id="mux.service" class="org.red5.service.httpstream.MuxService" />
+	   
+    <bean id="segmenter.service" class="org.red5.service.httpstream.SegmenterService">
+        <!-- Mux service -->
+        <property name="muxService" ref="mux.service" />
+        <!-- Thread executor -->
+        <property name="segmentExecutor" ref="segmentExecutor" />
+        <!-- Length of a segment in milliseconds -->
+        <property name="segmentTimeLimit" value="2000" />
+        <!-- Store segments (.ts) in memory -->
+        <property name="memoryMapped" value="false" />
+        <!-- Directory where segments and playlist files are stored -->
+        <property name="segmentDirectory" value="webapps/hlsapp/WEB-INF/segments/" />
+        <!-- Maximum segments to keep in a segment facade -->
+        <property name="maxSegmentsPerFacade" value="8" />           
+        <property name="outputAudioCodec" value="libvo_aacenc" />        
+        <!-- 
+        <property name="outputAudioCodec" value="libmp3lame" />        
+         -->
+        <property name="outputVideoCodec" value="libx264" />     
+    </bean>
+    
+    <bean id="segmentExecutor" scope="prototype" class="org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler">
+        <property name="poolSize" value="4" />  
+        <property name="waitForTasksToCompleteOnShutdown" value="false"/>
+        <property name="daemon" value="true"/>
+        <property name="threadNamePrefix" value="SegmentExecutor-"/>
+    </bean>
+
+</beans>

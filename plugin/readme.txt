@@ -65,7 +65,7 @@ application web.xml as follows.
         <mime-type>video/MP2T</mime-type>
     </mime-mapping>	
 	
-Special thanks to Infrared5 Inc. for donating the initial code.
+Special thanks to Infrared5 Inc. for donating the initial code and for BigMarker sponsoring updates.
 
 Notes:
 Cupertino / Apple HLS is very particular with encoding. 

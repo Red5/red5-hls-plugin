@@ -1,0 +1,134 @@
+body {
+   text-align: justify;
+   font-family: Verdana, Arial, helvetica, sans-serif;
+}
+
+a {
+    font-family: Verdana, Arial, helvetica, sans-serif;
+    font-size: 12px;
+	color: #000000;
+}
+
+a:active {
+    color: #999999;
+}
+
+a:visited {
+    color: #000000;
+}
+
+p {
+	font-family: Verdana, Arial, sans-serif;
+}
+
+dt {
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 12px;
+}
+
+dd {
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 12px;
+}
+
+p, dl, dt, dd, blockquote {
+    color: #000000;
+    padding-top: 0;
+}
+
+
+p, blockquote {
+    font-size: 90%;
+}
+
+td {
+    font-size: 12px;
+}
+
+td, th, span {
+    color: #000000;
+}
+
+code {
+	color: #e01c2f;
+}
+
+h1, h2, h3, h4, h6 {
+    color: #000000;
+    font-weight: 500;
+    margin-top: 0;
+    font-family: Verdana, Arial, helvetica, sans-serif;
+    margin-bottom: 0;
+}
+
+td {
+    font-family: Verdana, Arial, helvetica, sans-serif;
+}
+
+
+/* Headings */
+h1 { font-size: 20px; }
+
+/* Top Class Heading */
+h2 { font-size: 18px; color: #e01c2f; }
+h3 { font-size: 14px; }
+h4 { font-size: 12px; }
+
+tt {
+    font-size: 110%;
+    font-family: "Courier New", Courier, monospace;
+    color: #000000;
+}
+
+pre {
+    font-size: 14px;
+    padding: 5px;
+    border-style: solid;
+    border-width: 1px;
+	border-color: #000000;
+	background-color: #CCCCCC;
+	font-family: Verdana, Arial, helvetica, sans-serif;
+}
+
+hr {
+    width: 100%;
+    height: 1px;
+    background-color: #CCCCCC;
+    border-width: 0;
+    padding: 0;
+}
+
+FRAMESET[^cols="20%,80%"] {
+	cols:"40%,100%";	
+}
+
+/* Top Table Heading */
+tr.TableHeadingColor th font b {
+	font-size: 16px;	
+	color: #e01c2f;
+}
+
+tr.TableHeadingColor th font {
+	font-size: 16px;	
+}
+
+/* Table colors */
+.TableHeadingColor     { background: #999999 }
+
+/* Subheading Background */
+.TableSubHeadingColor  { background: #f3f5e9 } 
+.TableRowColor         { background: #FFFFFF } 
+
+/* Font used in left-hand frame lists */
+.FrameTitleFont   { font-size: 14px; font-family: Verdana, Arial, helvetica, sans-serif; }
+.FrameHeadingFont { font-size: 14px; font-family: Verdana, Arial, helvetica, sans-serif; }
+.FrameItemFont    { font-size: 12px; font-family: Verdana, Arial, helvetica, sans-serif; }
+
+/* Navigation bar fonts and colors */
+.NavBarCell1    { background-color:#999999;} /* Light mauve */
+.NavBarCell1Rev { background-color:#CCCCCC;} /* Dark Blue */
+.NavBarFont1    { font-family: Verdana, Arial, helvetica, sans-serif; color:#000000; font-size: 12px;}
+.NavBarFont1Rev { font-family: Verdana, Arial, helvetica, sans-serif; color:#FFFFFF; font-size: 12px;}
+
+.NavBarCell2    { font-family: Verdana, Arial, helvetica, sans-serif; background-color:#FFFFFF;}
+.NavBarCell3    { font-family: Verdana, Arial, helvetica, sans-serif; background-color:#FFFFFF; font-size: 14px;}
