@@ -21,4 +21,11 @@ mvn eclipse:eclipse
 
 Then you will be able to import the projects into Eclipse.
 
+== Deployment ==
+
+1. Build both the hls-plugin and the example application (or use your own app). 
+2. Place the war in the red5/webapps directory
+3. Place the "hls-plugin-1.1.jar" jar in the red5/plugins directory
+4. Put the "xuggle-xuggler-5.x.jar" and "xuggle-utils-1.22.jar" jars in the red5/plugins directory
+5. Start red5
 
