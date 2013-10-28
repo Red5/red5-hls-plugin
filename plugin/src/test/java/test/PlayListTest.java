@@ -27,6 +27,7 @@ public class PlayListTest {
 	@Test
 	public void test() {
 		// @TODO make this test runnable in junit
+		assertTrue(true);
 		/*
 		// init service
 		service.init(streamName);
@@ -46,6 +47,7 @@ public class PlayListTest {
 		*/
 	}
 
+	@SuppressWarnings("unused")
 	private void dumpPlaylist() {
 		int count = service.getSegmentCount(streamName);
 		// get the completed segments

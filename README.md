@@ -33,3 +33,7 @@ Deployment
 4. Put the "xuggle-xuggler-5.x.jar" and "xuggle-utils-1.22.jar" jars in the red5/plugins directory
 5. Start red5
 
+Xuggler
+-------------
+You can download Xuggler 5.4 with native libs included here: http://xuggle.googlecode.com/svn/trunk/repo/share/java/xuggle/xuggle-xuggler/5.4/xuggle-xuggler-5.4.jar
+
