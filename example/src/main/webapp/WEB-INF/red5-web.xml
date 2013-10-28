@@ -22,7 +22,7 @@
 
     <bean id="schedulingService" class="org.red5.server.scheduling.ApplicationSchedulingService" />
 
-	<bean id="web.handler" class="com.red5.hlsapp.Application" />
+	<bean id="web.handler" class="org.red5.hlsapp.Application" />
 	  
     <bean id="mux.service" class="org.red5.service.httpstream.MuxService" />
 	   
