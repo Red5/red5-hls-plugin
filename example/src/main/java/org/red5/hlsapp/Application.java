@@ -1,4 +1,4 @@
-package com.red5.hlsapp;
+package org.red5.hlsapp;
 
 import org.red5.logging.Red5LoggerFactory;
 import org.red5.server.adapter.MultiThreadedApplicationAdapter;
