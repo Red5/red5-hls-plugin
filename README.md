@@ -42,7 +42,7 @@ Tiago's Step-by-step Guide
 Steps to install in Ubuntu 12.04
 
 Note: Use red5 user to do the not sudo steps
-
+```
 1 - Install required packages
 sudo apt-get purge openjdk-6-*
 sudo apt-get install openjdk-7-jdk gcc-4.6 g++-4.6 perl yasm ant pkg-config maven2 git make
@@ -78,7 +78,7 @@ cp /home/red5/red5-hls-plugin/plugin/target/hls-plugin-1.1.jar  /home/red5/red5-
 6 - Change queueCapacity to 20 in file /home/red5/red5-server-1.0.2-RC3/conf/red5-core.xml
 
 7 - Start red5 server
-
+```
 Donations
 -------------
 Donate to the cause using Bitcoin: https://coinbase.com/checkouts/2c5f023d24b12245d17f8ff8afe794d3
