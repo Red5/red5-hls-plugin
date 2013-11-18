@@ -52,8 +52,9 @@ sudo ln /usr/bin/g++-4.6 /usr/bin/g++ -s
 2 - Download red5 (trunk version)
 wget "https://builds.apache.org/job/Red5%20Trunk/lastSuccessfulBuild/artifact/trunk/target/red5-server-1.0.2-RC3-server.tar.gz"
 
-3 - Build xuggler:
+3 - Build xuggler
 git clone git://github.com/xuggle/xuggle-xuggler.git
+cd xuggle-xuggler
 ant
 cp /home/red5/xuggle-xuggler/dist/lib/xuggle-xuggler-noarch.jar /home/red5/red5-server-1.0.2-RC3/plugins/
 cp /home/red5/xuggle-xuggler/dist/lib/xuggle-xuggler-arch-x86_64-unknown-linux-gnu.jar /home/red5/red5-server-1.0.2-RC3/plugins/
