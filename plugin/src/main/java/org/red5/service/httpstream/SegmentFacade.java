@@ -219,7 +219,7 @@ public class SegmentFacade {
 
 	public int getSegmentCount() {
 		log.trace("Total segments: {}", segments.size());
-		return isComplete() ? segments.size() : segments.size() - 1;
+		return isComplete() ? segments.size() : (segments.size() > 0 ? segments.size() - 1 : 0);
 	}
 
 	public int getActiveSegmentIndex() {
