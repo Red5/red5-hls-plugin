@@ -30,11 +30,14 @@ Deployment
 1. Build both the hls-plugin and the example application (or use your own app). 
 2. Place the war in the red5/webapps directory
 3. Place the "hls-plugin-1.1.jar" jar in the red5/plugins directory
-4. Put the "xuggle-xuggler-5.x.jar" and "xuggle-utils-1.22.jar" jars in the red5/plugins directory
+4. Put the "xuggle-xuggler-5.x.jar" jar in the red5/plugins directory
 5. Start red5
+ 
+<i>Note: make sure you do not have the xuggler util jar in "plugins" or "lib", it has been found to cause failures</i>
 
 Xuggler
 -------------
+The Xuggler project is no longer actively developed, but remains the best way to manipulate media in Java using FFMpeg. The project page is here: https://github.com/artclarke/xuggle-xuggler
 You can download Xuggler 5.4 with native libs included here: http://xuggle.googlecode.com/svn/trunk/repo/share/java/xuggle/xuggle-xuggler/5.4/xuggle-xuggler-5.4.jar
 
 Tiago's Step-by-step Guide
